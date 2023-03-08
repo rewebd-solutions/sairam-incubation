@@ -1,6 +1,6 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,600;1,500;0,700;&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 * {
     margin: 0;
@@ -14,14 +14,24 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     font-weight: 600;
+    scroll-behavior: smooth;
 }
 
 .nav-main {
+    z-index: 999;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.5% 3%;
+    background: #fff;
     box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    /* transform: translateY(100px); */
+}
+
+.nav-main-hide{
+    transform: translateY(-100px);
 }
 
 .sairam-logo {
@@ -98,6 +108,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.swiper-slide img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .text-gradient {
