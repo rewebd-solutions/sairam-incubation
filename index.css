@@ -12,7 +12,7 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
+    font-size: 1vw;
     font-weight: 600;
     scroll-behavior: smooth;
 }
@@ -27,6 +27,7 @@ body {
     background: #fff;
     box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
+    width: 100%;
     /* transform: translateY(100px); */
 }
 
@@ -98,7 +99,8 @@ body {
 
 .swiper {
     width: 100%;
-    height: 500px;
+    height: 80vh;
+    /* margin-top: px; */
     background: #868686;
     position: relative;
 }
@@ -145,14 +147,15 @@ body {
     border-radius: 15px;
     box-shadow: 1px 0 10px rgba(0, 0, 0, 0.200);
     bottom: 50px;
-    left: 45%;
+    left: 50%;
+    transform: translateX(-50%);
     transition: transform 0.25s ease;
     z-index: 10;
     font-weight: 600;
 }
 
 .apply-now:hover {
-    transform: scale(1.1);
+    transform: translateX(-50%) scale(1.1);
 }
 
 .why-incubation {
@@ -180,7 +183,7 @@ body {
 .data h2 {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-size: 44px;
+    font-size: 3.22vw;
     font-weight: 700;
     color: rgba(17, 17, 17, 0.8);
 }
@@ -196,7 +199,7 @@ body {
 .desc-info {
     font-family: 'Montserrat';
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.17vw;
     line-height: 32px;
     color: #454545;
 }
@@ -229,7 +232,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 26px;
+    font-size: 1.9vw;
     color: rgba(17, 17, 17, 0.8);
 }
 
@@ -240,10 +243,11 @@ body {
 }
 
 .incubation-points p {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.15vw;
     line-height: 26px;
+    color: #454545
 }
 
 .projects {
@@ -260,13 +264,13 @@ body {
 .our-projects {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 44px;
+    font-size: 3.22vw;
     color: rgba(69, 69, 69, 0.8);
 }
 
 .projects-swiper {
     width: 90%;
-    height: 500px;
+    height: 75vh;
     background-color: transparent;
     padding: 4% 0;
     padding-bottom: 8%;
@@ -306,21 +310,10 @@ body {
     width: 100%;
     overflow: hidden;
 }
-
+/* 
 .project-image {
-    width: 140%;
-    transform: translate(-25%, 5%);
-}
-
-/* .projects-text-gradient{
-    position: absolute;
-    z-index: 22;
     width: 100%;
-    height: 100%;
-    /* top: 0; */
-/* background: rgb(2,0,36); */
-/* background: linear-gradient(-90deg, rgba(0,0,0,0.5) 0%, rgba(40,40,40,0.02) 70%, rgba(40,40,40,0) 100%); */
-/* outline: 1px solid red; 
+    /* transform: translate(-5%, 5%); 
 } */
 
 .project-info {
@@ -363,8 +356,8 @@ body {
 
 .container {
     position: relative;
-    height: 450px;
-    width: 350px;
+    height: 36.6vw;
+    width: 29.3vw;
     /* overflow: hidden; */
     background: #fff;
     box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.3);
@@ -440,7 +433,7 @@ ul li a {
     width: 50px;
     color: #000;
     line-height: 50px;
-    font-size: 20px;
+    font-size: 1.46vw;
     border-radius: 50%;
     opacity: 0;
     transform: translateY(200px);
@@ -488,7 +481,7 @@ ul li a {
 }
 
 .info h2 {
-    font-size: 27px;
+    font-size: 1.97vw;
     margin: 3px 0;
 }
 
@@ -498,13 +491,13 @@ ul li a {
 
 .footer{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     /* background: linear-gradient(90deg, rgba(173, 204, 233, 0.5) 0%, rgba(255, 255, 255, 0) 100%); */
     background: linear-gradient(180deg, rgba(173, 204, 233, 0.5) 0%, rgba(255, 255, 255, 0) 51.04%, rgba(236, 243, 250, 0.117021) 62.5%, rgba(173, 204, 233, 0.5) 100%);
     box-shadow: inset 0px 0px 30px #ADCCE9;
-    padding: 5%
+    padding: 1%
 }
 
 .map-contact{
@@ -512,13 +505,17 @@ ul li a {
     align-items: center;
     justify-content: center;
     /* outline: 1px solid red; */
+    width: auto;
+    height: 100%;
     /* width: 20%; */
 }
 
 .logo-details{
     display: flex;
     flex-direction: column;
-    /* padding: 2% */
+    /* outline: 1px solid red; */
+    padding: 2%;
+    /* margin-left: auto; */
 }
 
 .logo-details img{
@@ -530,13 +527,18 @@ ul li a {
     color: rgba(69, 69, 69, 1);
     font-family: 'Open Sans';
     font-weight: 600;
-    font-size: 18px;
+    font-size: 1.2vw;
     line-height: 37px;
     /* position: relative;
     width: fit-content; */
 }
 
-.logo-details a::after{
+.logo-details a span{
+    position: relative;
+    width: 100%;
+}
+
+.logo-details a span::after{
     content: '';
     position: absolute;
     width: 100%;
@@ -544,40 +546,40 @@ ul li a {
     height: 3px;
     bottom: -3px;
     left: 0;
-    background-color: #454545;
+    background-color: rgba(67, 137, 250, 255);
     transform-origin: center;
     transition: transform 0.25s ease-out;
 }
 
-.logo-details a:hover::after{
+.logo-details a span:hover::after{
     transform: scaleX(1);
 }
 
 .logo-details i{
-    font-size: 20px;
+    font-size: 1.5vw;
     color: rgba(67, 137, 250, 255);
     margin-right: 5%
 }
 
 .logo-details .fab{
-    font-size: 22px;
+    font-size: 1.5vw;
 }
 
 form{
-  width: 25rem;
+  width: 26vw;
   display: flex;
   flex-direction:column;
   background-color: #fff;
-  height: 28rem;
+  /* height: 28rem; */
   box-shadow:0 4px 12px 0 rgba(5,5,5,0.1);
-  padding: 3% 5%;
+  padding: 5% 5%;
   border-radius: 5px 0 0 5px;
 }
 
 form h1{
     font-family: 'Open Sans';
     font-weight: 700;
-    font-size: 44px;
+    font-size: 2.6vw;
     line-height: 58px;
     color: #454545;
     margin-bottom: 20px;
@@ -585,7 +587,7 @@ form h1{
 
 label
 {
-  font-size: 14px;
+  font-size: 1vw;
   /* margin-left: 1%; */
   color: #454545;
   font-weight: 700;
@@ -611,7 +613,7 @@ input:focus{
 
 input[placeholder]{
     color: #454545;
-    font-size: 14px;
+    font-size: 1vw;
     font-family: 'Open Sans', sans-serif;
     padding: 5px 0;
 }
@@ -631,7 +633,7 @@ textarea:focus{
 
 textarea[placeholder]{
     font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
+    font-size: 1vw;
 }
 
 form button{
@@ -649,4 +651,6 @@ form button:hover{
 
 .map-contact iframe{
     border-radius: 0px 5px 5px 0;
+    width: 25vw;
+    height: 32.5vw;
 }
