@@ -97,6 +97,32 @@ body {
     transform: scaleX(1);
 }
 
+.hamburger{
+    display: none;
+    /* outline: 1px solid red; */
+}
+
+.x{
+    transform: rotate(46deg) translateY(4px);
+}
+
+.y{
+    transform: rotate(-46deg) translateY(-4px);
+}
+
+.x-fade{
+    opacity: 0;
+}
+
+.nav-comp{
+    width:100%; 
+    height:11vh;
+}
+
+.nav-main-mobile{
+    display: none;
+}
+
 .swiper {
     width: 100%;
     height: 80vh;
@@ -678,4 +704,117 @@ form button:hover{
     border-radius: 0px 5px 5px 0;
     width: 25vw;
     height: 32.5vw;
+}
+
+@media screen and (max-width: 575px) {
+    .nav-main .nav-btns{
+        display: none;
+    }
+
+    .sairam-logo{
+        width: 20%;
+    }
+
+    .incubator-logo{
+        width: 30%
+    }
+
+    .nav-main-mobile{
+        display: flex;
+        position: fixed;
+        background-color: #fff;
+        justify-content: center;
+        align-items: center;
+        right:0;
+        top:0;
+        width: 50vw;
+        height: 100vh;
+        z-index: 998;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-main-mobile .nav-btns{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        font-size: 14px
+    }
+
+    .nav-main-hide-mobile{
+        transform: translateX(100%);
+    }
+
+    .contact-btn{
+        padding: 10px 15px;
+    }
+
+    .hamburger{
+        display: flex;
+        height: 20px;
+        width: 20px;
+        background-color: transparent;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        gap: 2px;
+    }
+        
+    .hamburger span{
+        width: 12px;
+        height: 1px;
+        background-color: #000;
+        transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .nav-comp{
+        height: 3vh;
+    }
+
+    .swiper{
+        height: 30vh;
+        aspect-ratio: 16/9;
+    }
+
+    .swiper-pagination,
+    .swiper-button-prev,
+    .swiper-button-next {
+        transform: scale(0.56);
+    }
+
+    .apply-now{
+        padding: 7px 12px;
+        bottom: 10%;
+    }
+
+    .why-incubation{
+        flex-direction: column;
+        gap: 20px
+    }
+
+    .incubation-main{
+        width: 60%;
+    }
+
+    .data{
+        gap: 20px;
+        width: 70%;
+    }
+
+    .data h2{
+        font-size: 18px;
+    }
+
+    .underline{
+        height: 6px;
+    }
+
+    .desc-info{
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .incubation-points{
+        flex-direction: column;
+    }
 }

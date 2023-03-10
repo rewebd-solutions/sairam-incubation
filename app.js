@@ -43,17 +43,20 @@ window.addEventListener("scroll", function(){
   // or window.addEventListener("scroll"....
   var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
 
-  if (window.pageYOffset >= 500 || document.documentElement.scrollTop >= 500) {
+  if (screen.width >= 575){
+    if (window.pageYOffset >= 500 || document.documentElement.scrollTop >= 500) {
+      document.querySelector(".underline").classList.add("underline-reveal");
+    } else if (window.pageYOffset <= 400 || document.documentElement.scrollTop <= 400) {
+      document.querySelector(".underline").classList.remove("underline-reveal");
+    }
+    if (window.pageYOffset >= 900 || document.documentElement.scrollTop >= 900) {
+      document.querySelectorAll(".underline-points").forEach((e) => e.classList.add("underline-reveal"));
+    } else if (window.pageYOffset <= 700 || document.documentElement.scrollTop <= 700) {
+      document.querySelectorAll(".underline-points").forEach((e) => e.classList.remove("underline-reveal"));
+    }
+  }else{
     document.querySelector(".underline").classList.add("underline-reveal");
-    // document.querySelectorAll(".underline-points").forEach((e) => e.classList.add("underline-reveal"));
-  } else if (window.pageYOffset <= 400 || document.documentElement.scrollTop <= 400) {
-    document.querySelector(".underline").classList.remove("underline-reveal");
-    // document.querySelectorAll(".underline-points").forEach((e) => e.classList.remove("underline-reveal"));
-  }
-  if (window.pageYOffset >= 900 || document.documentElement.scrollTop >= 900) {
     document.querySelectorAll(".underline-points").forEach((e) => e.classList.add("underline-reveal"));
-  } else if (window.pageYOffset <= 700 || document.documentElement.scrollTop <= 700) {
-    document.querySelectorAll(".underline-points").forEach((e) => e.classList.remove("underline-reveal"));
   }
 
   if (st > lastScrollTop) {
@@ -73,3 +76,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+const nav = document.querySelector(".nav-main-mobile");
+function menuToggle(){
+  nav.classList.toggle("nav-main-hide-mobile");
+  let hamburger = document.querySelector(".hamburger");
+  hamburger.children[0].classList.toggle("x");
+  hamburger.children[2].classList.toggle("y");
+  hamburger.children[1].classList.toggle("x-fade");
+}
