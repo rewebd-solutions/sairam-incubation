@@ -103,11 +103,11 @@ body {
 }
 
 .x{
-    transform: rotate(46deg) translateY(4px);
+    transform: rotate(46deg) translateY(7px);
 }
 
 .y{
-    transform: rotate(-46deg) translateY(-4px);
+    transform: rotate(-46deg) translateY(-7px);
 }
 
 .x-fade{
@@ -163,6 +163,10 @@ body {
     color: #ebebeb;
 }
 
+.proj-swiper img{
+    object-fit: contain;
+}
+
 .apply-now {
     text-decoration: none;
     position: absolute;
@@ -182,6 +186,72 @@ body {
 
 .apply-now:hover {
     transform: translateX(-50%) scale(1.1);
+}
+
+.project-sec {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    padding: 10% 8%;
+    gap: 15%;
+    width: 100%;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(173, 204, 233, 0.5) 100%);
+    box-shadow: inset 0px 0px 15px #ADCCE9;
+}
+
+.project-sec img{
+    object-fit: contain;
+}
+
+.tg  {border-collapse:collapse;border-color:#aabcfe;border-spacing:0;}
+.tg td{background-color:#e8edff;border-color:#aabcfe;border-style:solid;border-width:1px;color:#669;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#b9c9fe;border-color:#aabcfe;border-style:solid;border-width:1px;color:#039;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-cly1{text-align:center;vertical-align:middle}
+.tg .tg-5lax{background-color:#D2E4FC;text-align:center;vertical-align:middle}
+tr .tg-cly1:nth-child(1){ text-align: center;}
+.project-main {
+    width: 40%;
+}
+
+.apply-banner{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    gap: 25px;
+    padding: 4vw;
+}
+
+.apply-banner-text{
+    font-size: 1.5vw;
+    font-family: 'Monsterrat', sans-serif;
+    color: #454545;
+    font-weight: 400;
+}
+.apply-banner .apply-now{
+    position: unset;
+    bottom: unset;
+    left: unset;
+    transform: translateX(0);
+}
+
+.project-info .apply-now{
+    position: unset;
+    bottom: unset;
+    left: unset;
+    transform: translateX(0);
+    margin-top: 20px
+}
+
+.project-info .apply-now:hover{
+    transform: scale(1.1);
+}
+
+.apply-banner .apply-now:hover{
+    transform: scale(1.1);
 }
 
 .why-incubation {
@@ -378,6 +448,7 @@ body {
     padding: 15px;
     height: 100%;
     width: 70%;
+    gap: 1vw;
     background: rgb(2, 0, 36);
     background: linear-gradient(270deg, rgba(0, 0, 0, 0.692) 0%, rgba(36, 36, 36, 0.493) 70%, rgba(0, 0, 0, 0) 100%);
     padding-left: 15%;
@@ -727,7 +798,7 @@ form button:hover{
         align-items: center;
         right:0;
         top:0;
-        width: 50vw;
+        width: 60vw;
         height: 100vh;
         z-index: 998;
         transition: transform 0.3s ease;
@@ -762,9 +833,10 @@ form button:hover{
         
     .hamburger span{
         width: 15px;
-        height: 0.3vh;
+        height: 2px;
         background-color: #000;
         transition: opacity 0.25s ease, transform 0.25s ease;
+        transform-origin: center;
     }
 
     .nav-comp{
@@ -884,4 +956,37 @@ form button:hover{
     .our-projects .swiper-pagination{
         transform: translateY(10px);
     }
+
+    .footer{
+        flex-direction: column;
+    }
+
+    .footer > *{
+        outline: 1px solid red;
+    }
+
+    /* .footer > * > *{
+        outline: 1px solid red;
+    } */
+
+    .logo-details{
+        align-items: center;
+    }
+
+    .logo-details img{
+        width: 50%;
+    }
+
+    .logo-details a > *{
+        display: contents;
+    }
+
+    .logo-details a{
+        font-size: 12px;
+    }
+
+    .logo-details a i{
+        font-size: 13px;
+    }
+
 }
