@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <title>Avian Incubator - Sairam Techno Incubator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <nav class="nav-main">
+        <img class="sairam-logo" src="images/clg.png" alt="Sairam Institutions">
+        <img class="incubator-logo" src="images/logo.png" alt="Sairam Techno Incubator">
+        <div class="nav-btns">
+            <a class="nav-link" href="index.html#home">HOME</a>
+            <a class="nav-link" href="index.html#about-us">ABOUT US</a>
+            <a class="nav-link" href="#about-us">PROJECT</a>
+            <a class="nav-link" href="index.html#team">TEAM</a>
+            <a href="#footer" class="contact-btn"><i class="fa fa-phone-alt"></i>&nbsp; CONTACT</a>
+        </div>
+        <button class="hamburger" onclick="menuToggle()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <nav class="nav-main-mobile nav-main-hide-mobile">
+        <div class="nav-btns">
+            <a class="nav-link" href="index.html#home">HOME</a>
+            <a class="nav-link" href="index.html#about-us">ABOUT US</a>
+            <a class="nav-link" href="#about-us">PROJECT</a>
+            <a class="nav-link" href="index.html#team">TEAM</a>
+            <a href="#footer" class="contact-btn"><i class="fa fa-phone-alt"></i>&nbsp; CONTACT</a>
+        </div>
+    </nav>
+
+    <div class="nav-comp"></div>
+    <div id="home" class="swiper main-swiper proj-swiper">
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <img src="images/projects/p8-1.png" alt="">
+                <div class="text-gradient"></div>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/projects/p8-2.jpg" alt="">
+                <div class="text-gradient"></div>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/projects/p8-3.png" alt="">
+                <div class="text-gradient"></div>
+            </div>
+        </div>
+          <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <section id="about-us" class="project-sec">
+        <img src="images/projects/p8-1.png" alt="Project Sample Image" class="project-main">
+
+        <div class="data">
+            <h2> CANSAT Training</h2>
+            <hr class="underline">
+            <table class="tg">
+                <thead>
+                  <tr>
+                    <th class="tg-cly1">LMES Coordinator:</th>
+                    <th class="tg-cly1"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tg-cly1">Staff Coordinator:</td>
+                    <td class="tg-5lax"> </td>
+                  </tr>
+                  <tr>
+                    <td class="tg-cly1">Project Start Date:</td>
+                    <td class="tg-5lax"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-cly1">Project End Date:</td>
+                    <td class="tg-5lax"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-cly1">Total Student count:</td>
+                    <td class="tg-5lax"></td>
+                  </tr>
+                </tbody>
+                </table>
+            <p class="desc-info">
+                The report details the five days training program conducted by out beloved Sairam Institution 
+                namely “CANSAT”.
+                The training program was initiated by Mr.K.Prabakaran and it had taken over by the experienced 
+                trainers from the ”Hyoristic Innovations” Mr.R.L.Hari shankar (Founder & CEO) , Ms.Swetha (CPO) , 
+                Mr.Aravindraj (Embedded Hardware Engineer) and Mr.R.Giridhar (Embedded Engineer). Their words 
+                helped us to improve our knowledge of the satellite system. 
+                <br><br>A cansat is a small Satellite which is put inside a CAN and it records the data of 
+                Altitude, Pressure, Temperature, Time, Location, Gas, Acceleration, Magneticfield, Gyrometer reading of the 
+                Satellite within the particular period of time.
+        </div>
+    </section>
+
+    <section class="apply-banner">
+        <h3 class="apply-banner-text">Have a project ready?</h3>
+        <a href="/form.html" class="apply-now">APPLY NOW</a>
+    </section>
+
+    <section id="footer" class="footer">
+        <div class="logo-details">
+            <img src="images/incubator-logo.png" alt="Sairam Incubator Foundation">
+            <a target="_blank" href="tel:+91 72000 926999"><i class="fa fa-phone-alt"></i><span> +91 72000 92699</span></a>
+            <a target="_blank" href="https://www.instagram.com/techno_incubator_sairam/"><i class="fab fa-instagram"></i><span> @techno_incubator_sairam</span></a>
+            <a target="_blank" href="mailto:incubation@sairam.edu.in"><i class="fa fa-envelope"></i><span> incubation@sairam.edu.in</span></a>
+            <a target="_blank" href="mailto:queries.rd@sairam.edu.in">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span> queries.rd@sairam.edu.in</span></a>
+        </div>
+        <div class="map-contact">
+            <form>
+                <h1>Contact Us</h1>
+                <label>Email</label>
+                <input type="text" placeholder="Enter a valid email address">
+                <label>Name</label>
+                <input type="text" placeholder="Enter your Name">
+                <label>Message</label>
+                <textarea placeholder="Enter your message" name="" id="" cols="20" rows="5"></textarea>
+                <button>SUBMIT</button>
+            </form>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6328.373821866053!2d80.05339451524428!3d12.962067721884315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f596c7fb72c9%3A0x8e7a30529f9ef227!2sSri%20Sairam%20Engineering%20College!5e1!3m2!1sen!2sin!4v1678295409486!5m2!1sen!2sin" 
+              style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
