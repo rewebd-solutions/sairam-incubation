@@ -226,10 +226,10 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
 }
 
 .apply-banner-text{
-    font-size: 1.5vw;
-    font-family: 'Monsterrat', sans-serif;
     color: #454545;
-    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
 }
 .apply-banner .apply-now{
     position: unset;
@@ -335,7 +335,7 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 1.9vw;
+    font-size: clamp(1.6vw, 50% + 1rem, 2vw);
     color: rgba(17, 17, 17, 0.8);
 }
 
@@ -419,7 +419,7 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     gap: 10px;
 }
 
-.projects-swiper-slide~.swiper-slide-active {
+.projects-swiper-slide ~ .swiper-slide-active {
     background: white;
     z-index: 100;
     transform: scale(1.1);
@@ -487,7 +487,6 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     overflow: auto;
 }
 
-
 .startup-points h3 {
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 20px;
@@ -516,12 +515,11 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
 .team-cards {
     display: flex;
     padding: 2%;
-    width: 90%;
+    width: 100%;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 5%;
-    /* gap: 5%; */
 }
 
 .profile-card{
@@ -562,8 +560,14 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     border-radius: 3px;
 }
 
+.pf-details h3{
+    font-size: 1.35rem;
+}
+
 .pf-details p{
+    font-size: 1.1rem;
     text-align: center;
+    color: rgba(255, 255, 255, 0.755);
 }
 
 .pfp{
@@ -587,6 +591,8 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
 
 .pfp img{
     height: 100%;
+    position: absolute;
+    top: 0;
     width: 100%;
     object-fit: cover;
     opacity: 1;
@@ -925,6 +931,9 @@ form button{
     background-color: rgba(67, 137, 250, 255);
     color: #ebebeb;
     cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
     transition: box-shadow 0.25s ease;
 }
 
@@ -998,7 +1007,7 @@ form button:hover{
     }
 
     .nav-comp{
-        height: 8vh;
+        height: 3.8em;
     }
 
     .swiper{
@@ -1081,7 +1090,7 @@ form button:hover{
     }
 
     .our-projects{
-        font-size: 18px;
+        font-size: 1.5rem;
     }
 
     .projects-swiper{
@@ -1098,7 +1107,19 @@ form button:hover{
         width: 100%;
         height: 50%;
         bottom: 0;
+        padding: 5% 8%;
+        gap: 5px;
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.692) 0%, rgba(36, 36, 36, 0.493) 70%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    .project-info .apply-now{
+        display: block;
+        position: absolute;
+        bottom: 10px;
+        left: unset;
+        transform: translateX(0);
+        font-size: 0.85rem;
+        padding: 8px 20px;
     }
 
     .project-title{
@@ -1106,20 +1127,85 @@ form button:hover{
     }
 
     .project-desc{
-        font-size: 10px;
-        text-align: center;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 4;
-        height: 45px;
+        display: none;
     }
 
     .our-projects .swiper-pagination{
         transform: translateY(10px);
     }
 
+    .startup-points{
+        padding: 15% 0;
+    }
+
+    .startup-cards{
+        flex-direction: column;
+    }
+
+    .startup-card{
+        width: 310px;
+    }
+
+    .startup-card h3{
+        font-size: 1.5rem;
+    }
+
+    .startup-card .underline-points{
+        width: 60%;
+    }
+
+    .team-cards{
+        gap: 0px;
+    }
+
+    .profile-card{
+        transform: scale(0.9);
+        width: 300px;
+        height: 400px;
+    }
+
+    .pf-details h3{
+        font-size: 1.2rem;
+    }
+
+    .apply-banner{
+        height: 200px;
+        flex-direction: column;
+    }
+
+    .apply-banner-text{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: rgba(84, 84, 84, 0.842);
+    }
+
+    .apply-banner .apply-now{
+        display: block;
+        position: unset;
+        bottom: 10px;
+        left: unset;
+        transform: translateX(0);
+        font-size: 0.85rem;
+        padding: 8px 20px;
+    }
+
+    .gallery{
+        padding: 10% 0;
+        gap: 20px;
+    }
+
+    .gallery-images{
+        flex-direction: column;
+    }
+
+    .gallery-images img{
+        width: 80%;
+    }
+
     .footer{
         flex-direction: column;
+        gap: 25px;
     }
 
     .logo-details{
@@ -1127,7 +1213,7 @@ form button:hover{
     }
 
     .logo-details img{
-        width: 50%;
+        width: 60%;
     }
 
     .logo-details a > *{
@@ -1135,15 +1221,50 @@ form button:hover{
     }
 
     .logo-details a{
-        font-size: 12px;
+        font-size: 1rem;
     }
 
     .logo-details a i{
-        font-size: 13px;
+        font-size: 1rem;
+    }
+
+    .logo-details .fab{
+        font-size: 1.1rem;
     }
 
     .map-contact{
         flex-direction: column;
+        width: 100%;
+        gap: 20px;
+        padding: 10%;
+        /* outline: 1px solid red; */
+    }
+
+    form{
+        width: 80%;
+        padding: 20px;
+    }
+
+    form h1{
+        font-size: 1.5rem;
+    }
+
+    form label{
+        font-size: 0.9rem;
+    }
+
+    form input[placeholder]{
+        font-size: 0.8rem;
+    }
+
+    textarea[placeholder]{
+        font-size: 0.8rem;
+    }
+
+    .map-contact iframe{
+        border-radius: 0px;
+        width: 80%;
+        height: 300px;
     }
 
 }

@@ -9,6 +9,9 @@ const swiper = new Swiper('.main-swiper', {
       delay: 3000,
       disableOnInteraction: true,
     },
+    keyboard: {
+      enabled: true,
+    },
     // If we need pagination
     pagination: {
       el: '.swiper-pagination',
