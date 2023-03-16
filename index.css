@@ -1192,7 +1192,6 @@ form button:hover{
 
     .gallery{
         padding: 10% 0;
-        gap: 20px;
     }
 
     .gallery-images{
@@ -1266,5 +1265,4 @@ form button:hover{
         width: 80%;
         height: 300px;
     }
-
 }

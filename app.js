@@ -6,7 +6,7 @@ const swiper = new Swiper('.main-swiper', {
     loop: true,
     spaceBetween: 20,
     autoplay: {
-      delay: 3000,
+      delay: 5000,
       disableOnInteraction: true,
     },
     keyboard: {
