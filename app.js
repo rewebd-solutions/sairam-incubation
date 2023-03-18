@@ -84,16 +84,7 @@ const navLinks = document.querySelectorAll('a[href^="#"]');
 navLinks.forEach((anchor, i) => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        // console.log(i);
-        // navSliderLeft = 0;
-        // let navSliderWidth = anchor.clientWidth;
-        // for(let x=0; x<i; x++) {
-        //   // console.log(i);
-        //   navSliderLeft += navLinks[i].clientWidth;
-        // }
-        // console.log(navSliderWidth);
-        // navSlider.setAttribute("style", `width: ${navSliderWidth+20}px; left: ${navSliderLeft}px;`);
-        
+        console.log(e.target.innerWidth, i);
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
       });
