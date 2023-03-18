@@ -57,7 +57,7 @@ body {
     position: absolute;
     /* top: 0; */
     height: 70%;
-    outline: 1px solid blue;
+    /* outline: 1px solid blue; */
     top: 50%;
     transform: translateY(-50%);
 }
@@ -245,15 +245,6 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     bottom: unset;
     left: unset;
     transform: translateX(0);
-}
-
-.funds{
-    display: flex;
-    padding: 5%;
-    height: 300px;
-    justify-content: center;
-    background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(173, 204, 233, 0.5) 100%);
-    box-shadow: inset 0px 0px 15px #ADCCE9;
 }
 
 .project-info .apply-now{
@@ -569,7 +560,7 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
 }
 
 .marquee{
-    --gap: 1rem;
+    --gap: 1.7rem;
     display: flex;
     padding: 2% 5%;
     overflow: hidden;
@@ -589,7 +580,7 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
 }
 
 .marquee-content img{
-    height: 100px;
+    height: 120px;
     width: auto;
 }
 
@@ -619,6 +610,66 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     }
 }
 
+.funds{
+    display: flex;
+    padding: 5%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(173, 204, 233, 0.5) 100%);
+    box-shadow: inset 0px 0px 15px #ADCCE9;
+    gap: 5%;
+}
+
+.funds-div-wrapper{
+    display: flex;
+    width: 100%;
+    gap: 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+.fund-div{
+    max-width: 25%;
+    height: 400px;
+    gap: 10px;
+    margin: 3% 0;
+    transition: box-shadow 0.3s ease;
+    background: #FFFFFF;
+    border-radius: 15px;
+    border: 4px solid rgba(72, 139, 240, 0.391);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 1%;
+}
+
+.fund-div:hover{
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+}
+
+.fund-div img{
+    width: 50%;
+    margin-top: 30%;
+}
+
+.fund-details{
+    border: 1px solid rgba(67, 137, 250, 0.8);
+    padding: 12px 26px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.fund-details:hover{
+    box-shadow: 1px 0 10px rgba(0, 0, 0, 0.100);
+    background:rgba(67, 137, 250, 0.9);
+    color: white
+}
+
 .our-team {
     display: flex;
     flex-direction: column;
@@ -637,12 +688,14 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 5%;
+    gap: 3%;
 }
 
 .profile-card{
-    height: 450px;
-    width: 350px;
+    height: 425px;
+    width: 325px;
+    /* height: 425px;
+    width: 23%; */
     padding: 10px;
     /* outline: 1px solid red; */
     position: relative;
@@ -679,11 +732,11 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
 }
 
 .pf-details h3{
-    font-size: 1.35rem;
+    font-size: 1.2rem;
 }
 
 .pf-details p{
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-align: center;
     color: rgba(255, 255, 255, 0.755);
 }
@@ -915,6 +968,20 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
   /* border-radius: 5px 0 0 5px; */
 }
 
+.contact-details{
+    display: flex;
+    flex-direction: column;
+    /* outline: 1px solid red; */
+}
+
+.incub-footer{
+    width: 50%;
+}
+
+.sairam-footer{
+    width: 40%;
+}
+
 .form h1{
     font-family: 'Open Sans';
     font-weight: 700;
@@ -996,7 +1063,7 @@ textarea[placeholder]{
     height: 320px
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 800px) {
     .nav-main .nav-btns{
         display: none;
         justify-content: space-evenly;
@@ -1230,6 +1297,17 @@ textarea[placeholder]{
     .side-gradient{
         width: 50px;
     }
+
+    .funds-div-wrapper{
+        flex-direction: column;
+    }
+
+    .fund-div{
+        max-width: unset;
+        width: 90%;
+        padding: 3%;
+    }
+
     .profile-card{
         transform: scale(0.9);
         width: 300px;
@@ -1288,30 +1366,6 @@ textarea[placeholder]{
     .footer{
         flex-direction: column;
         gap: 25px;
-    }
-
-    .logo-details{
-        align-items: center;
-    }
-
-    .logo-details img{
-        width: 60%;
-    }
-
-    .logo-details a > *{
-        display: contents;
-    }
-
-    .logo-details a{
-        font-size: 1rem;
-    }
-
-    .logo-details a i{
-        font-size: 1rem;
-    }
-
-    .logo-details .fab{
-        font-size: 1.1rem;
     }
 
     .map-contact{
