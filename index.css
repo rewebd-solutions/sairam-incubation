@@ -11,8 +11,10 @@
 }
 
 body {
+    --gap: 10px;
+    --space: 0.5rem;
     font-family: 'Open Sans', sans-serif;
-    font-size: clamp(1.2vw, 1vw + 1rem, 1rem);
+    font-size: clamp(1vw, 1vw + 1rem, .95rem);
     font-weight: 600;
     scroll-behavior: smooth;
 }
@@ -35,11 +37,6 @@ body {
     transform: translateY(-100px);
 }
 
-.sairam-logo {
-    /* display: inline-block; */
-    width: 13%;
-}
-
 .incubator-logo {
     /* display: inline-block; */
     width: 15%;
@@ -48,10 +45,19 @@ body {
 .nav-btns {
     display: flex;
     /* justify-content: center; */
-    gap: 25px;
+    gap: 20px;
     align-items: center;
     width: fit-content;
     /* outline: 1px solid red; */
+    padding: 10px;
+    position: relative;
+}
+
+.nav-slider{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    /* outline: 1px solid blue; */
 }
 
 .nav-btns>a {
@@ -59,6 +65,7 @@ body {
     color: rgb(69, 69, 69);
     position: relative;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+    /* outline: 1px solid red; */
 }
 
 .nav-btns>a:hover {
@@ -238,6 +245,107 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     transform: translateX(0);
 }
 
+.startup-marquee{
+    display: flex;
+    padding: 7% 5%;
+    overflow: hidden;
+}
+
+/* .marquee {
+    --duration: 2s;
+    --gap: 0px;
+  
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    padding: 3% 2%;
+    gap: var(--gap);
+  }
+  
+  .marquee__group {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    min-width: 100%;
+    animation: scroll var(--duration) linear infinite;
+  }
+
+  .marquee__group img {
+    max-width: clamp(200px, 1rem + 28vmin, 20rem);
+    /* aspect-ratio: 1; 
+    object-fit: cover;
+  }  
+
+  
+@keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+  
+    100% {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+  } */
+/* stupid start */
+
+
+  
+  .marquee {
+    --duration: 10s;
+    --gap: var(--space);
+  
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+    padding: 2%;
+  }
+  
+  .marquee__group {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    min-width: 100%;
+    animation: scroll var(--duration) linear infinite;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .marquee__group {
+      animation-play-state: paused;
+    }
+  }
+  
+  .marquee__group img {
+    width: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+  
+    100% {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  
+/* stupid stop */
+
+.funds{
+    display: flex;
+    padding: 5%;
+    height: 300px;
+    justify-content: center;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(173, 204, 233, 0.5) 100%);
+    box-shadow: inset 0px 0px 15px #ADCCE9;
+}
+
 .project-info .apply-now{
     position: unset;
     bottom: unset;
@@ -320,7 +428,7 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
 
 .point-card {
     width: 45%;
-    min-height: 35%;
+    min-height: 290px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -329,6 +437,7 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     background: #FFFFFF;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
+    border: 4px solid rgba(72, 139, 240, 0.391);
 }
 
 .incubation-points h3 {
@@ -483,7 +592,27 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     background: #FFFFFF;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-    overflow: auto;
+    border: 4px solid rgba(72, 139, 240, 0.391);
+    position: relative;
+}
+
+.startup-card div{
+    width: 100%;
+    height: 60%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.startup-card .scroll-gradient{
+    /* outline: 1px solid red; */
+    position: absolute;
+    height: 20%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 40%, rgba(255,255,255,0.01) 100%);
+    border-radius: 10px;
 }
 
 .startup-points h3 {
@@ -496,8 +625,27 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
 }
 
 .startup-card ul{
-    margin-left: 30px;
-    color: #454545
+    margin-left: 20px;
+    color: #454545;
+}
+
+.startup-card ul li{
+    margin-bottom: 5px;
+    transition: margin-left 0.25s ease;
+}
+
+.startup-card ul li:hover{
+    /* transform: scale(1.05); */
+    margin-left: 10px;
+    cursor: default
+}
+
+.startup-card ul li::marker{
+    color: transparent;
+}
+
+.startup-card ul li:hover::marker{
+    color: rgba(67, 137, 250, 0.8)
 }
 
 .our-team {
@@ -671,27 +819,24 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
   }
   
 .fofo .form-details  form h1{
-      font-family: 'Open Sans';
-      text-align: center;
-      font-weight: 700;
-      font-size: 2.6vw;
-      /* line-height: 58px; */
-      color: #454545;
-      margin-bottom: 20px;
-  }
-  
-  .fofo .form-details  label
-  {
+    font-family: 'Open Sans';
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.6vw;
+    /* line-height: 58px; */
+    color: #454545;
+    margin-bottom: 20px;
+}
+
+.fofo .form-details  label{
     font-size: 1vw;
-    /* margin-left: 1%; */
     color: #454545;
     font-weight: 700;
     font-family: 'Open Sans', sans-serif;
     margin-top: -5px;
-  }
-  
-  .fofo .form-details input
-  {
+}
+
+.fofo .form-details input{
     /* width:80%; */
     margin:5% 0;
     margin-bottom: 5%;
@@ -700,50 +845,50 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     color: rgba(69, 69, 69, 1.0);
     background: none;
     border-bottom: 1px solid #454545;
-  }
-  
-  .fofo .form-details input:focus{
-      border-bottom: 2px solid #454545;
-  }
-  
-  .fofo .form-details input[placeholder]{
-      color: #454545;
-      font-size: 1vw;
-      font-family: 'Open Sans', sans-serif;
-      padding: 5px 0;
-  }
-  
-  .fofo .form-details textarea{
-      border: none;
-      border-bottom: 1px solid #454545;
-      margin-bottom: 10%;
-      margin-top: 5%;
-      background-color: rgba(236, 236, 236, 0.432);
-  }
-  
-  .fofo .form-details textarea:focus{
-      border-bottom: 2px solid #454545;
-      outline: none;
-  }
-  
-  .fofo .form-details textarea[placeholder]{
-      font-family: 'Open Sans', sans-serif;
-      font-size: 1vw;
-  }
-  
-  .fofo .form-details form button{
-      border: none;
-      padding: 4% 0;
-      background-color: rgba(67, 137, 250, 255);
-      color: #ebebeb;
-      cursor: pointer;
-      transition: box-shadow 0.25s ease;
-      font-size: 1vw;
-  }
-  
-  .fofo .form-details form button:hover{
-      box-shadow: 1px 5px 30px rgba(0, 0, 0, 0.253);
-  }
+}
+
+.fofo .form-details input:focus{
+    border-bottom: 2px solid #454545;
+}
+
+.fofo .form-details input[placeholder]{
+    color: #454545;
+    font-size: 1vw;
+    font-family: 'Open Sans', sans-serif;
+    padding: 5px 0;
+}
+
+.fofo .form-details textarea{
+    border: none;
+    border-bottom: 1px solid #454545;
+    margin-bottom: 10%;
+    margin-top: 5%;
+    background-color: rgba(236, 236, 236, 0.432);
+}
+
+.fofo .form-details textarea:focus{
+    border-bottom: 2px solid #454545;
+    outline: none;
+}
+
+.fofo .form-details textarea[placeholder]{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1vw;
+}
+
+.fofo .form-details form button{
+    border: none;
+    padding: 4% 0;
+    background-color: rgba(67, 137, 250, 255);
+    color: #ebebeb;
+    cursor: pointer;
+    transition: box-shadow 0.25s ease;
+    font-size: 1vw;
+}
+
+.fofo .form-details form button:hover{
+    box-shadow: 1px 5px 30px rgba(0, 0, 0, 0.253);
+}
 
 .gallery{
     display: flex;
@@ -1072,6 +1217,7 @@ form button:hover{
         background: #FFFFFF;
         box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
         border-radius: 15px;
+        border: 4px solid rgba(72, 139, 240, 0.391);
     }
 
     .point-card h3{
@@ -1163,14 +1309,21 @@ form button:hover{
         width: 60%;
     }
 
-    .team-cards{
-        gap: 0px;
-    }
-
     .profile-card{
         transform: scale(0.9);
         width: 300px;
         height: 400px;
+        flex: none;
+        scroll-snap-align: center;
+    }
+
+    .team-cards{
+        gap: 0px;
+        flex-wrap: unset;
+        overflow-x: scroll;
+        justify-content: flex-start;
+        /* overscroll-behavior-x: contain; */
+        scroll-snap-type: x mandatory;
     }
 
     .pf-details h3{
