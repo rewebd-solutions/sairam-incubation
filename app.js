@@ -50,7 +50,6 @@ window.addEventListener("scroll", function(){
   var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
 
   if (screen.width >= 575){
-    
     if (window.pageYOffset >= 500 || document.documentElement.scrollTop >= 500) {
       document.querySelector(".underline").classList.add("underline-reveal");
     } else if (window.pageYOffset <= 400 || document.documentElement.scrollTop <= 400) {
@@ -84,7 +83,7 @@ const navLinks = document.querySelectorAll('a[href^="#"]');
 navLinks.forEach((anchor, i) => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        console.log(e.target.innerWidth, i);
+  
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
       });
@@ -92,10 +91,25 @@ navLinks.forEach((anchor, i) => {
 });
 
 const nav = document.querySelector(".nav-main-mobile");
-function menuToggle(){
+const hamburger = document.querySelector(".hamburger");
+
+function menuToggle(e){
   nav.classList.toggle("nav-main-hide-mobile");
-  let hamburger = document.querySelector(".hamburger");
   hamburger.children[0].classList.toggle("x");
   hamburger.children[2].classList.toggle("y");
   hamburger.children[1].classList.toggle("x-fade");
 }
+
+hamburger.addEventListener('focusin', (e)=>{
+  nav.classList.remove("nav-main-hide-mobile");
+  hamburger.children[0].classList.toggle("x");
+  hamburger.children[2].classList.toggle("y");
+  hamburger.children[1].classList.toggle("x-fade");
+});
+
+hamburger.addEventListener('focusout', (e)=>{
+  nav.classList.add("nav-main-hide-mobile");
+  hamburger.children[0].classList.toggle("x");
+  hamburger.children[2].classList.toggle("y");
+  hamburger.children[1].classList.toggle("x-fade");
+});

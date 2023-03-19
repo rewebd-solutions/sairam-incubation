@@ -179,7 +179,7 @@ body {
 .apply-now {
     text-decoration: none;
     position: absolute;
-    background: rgba(67, 137, 250, 255);
+    background: #4389fa;
     padding: 0.8rem 1.6rem;
     cursor: pointer;
     color: #ebebeb;
@@ -280,6 +280,71 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     box-shadow: inset 0px 0px 15px #ADCCE9;
 }
 
+.why-funds {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    gap: 15%;
+    width: 100%;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(173, 204, 233, 0.5) 100%);
+    box-shadow: inset 0px 0px 15px #ADCCE9;
+}
+
+.why-funds img{
+    width: 20%;
+}
+
+.why-funds .data h2{
+    font-size: clamp(2.3rem, 1.5391rem + 1.2174vw, 3rem);
+    text-align: left;
+}
+
+.voucher-a{
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(173, 204, 233, 0.5) 100%);
+    width: 100%;
+    gap: 50px;
+}
+
+.vouching-companies{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    align-items: flex-start;
+}
+
+.company-card{
+    display: flex;
+    width: 320px;
+    height: auto;
+    padding: 1%;
+    gap: 20px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    flex-direction: column;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.company-card:hover{
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.22);
+}
+
+.company-card img{
+    object-fit: cover;
+}
+
+.company-card h3{
+    font-size: 1.2rem;
+    color:rgb(69, 69, 69)
+}
+
 .incubation-main {
     width: 40%;
 }
@@ -310,6 +375,17 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     transform-origin: left;
 }
 
+.underline-funds {
+    border: none;
+    height: 8px;
+    background-color: rgba(67, 137, 250, 255);
+    width: 50%;
+    border-radius: 3px;
+    transition: transform 0.5s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
 .underline-reveal{
     transform: scaleX(1);
 }
@@ -317,7 +393,8 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
 .desc-info {
     font-family: 'Montserrat';
     font-weight: 400;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    font-size: clamp(1.2rem, 0.23rem + 1.14vw, 1.6rem);
     line-height: 32px;
     color: #454545;
 }
@@ -502,7 +579,7 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     padding: 45px;
     background: #FFFFFF;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
+    border-radius: 10px;
     border: 4px solid rgba(72, 139, 240, 0.391);
     position: relative;
 }
@@ -535,7 +612,7 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     margin-bottom: 20px;
     font-style: normal;
     font-weight: 700;
-    font-size: 1.9vw;
+    font-size: 1.9rem;
     color: rgba(17, 17, 17, 0.8);
 }
 
@@ -641,7 +718,7 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     margin: 3% 0;
     transition: box-shadow 0.3s ease;
     background: #FFFFFF;
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
@@ -1243,6 +1320,29 @@ textarea[placeholder]{
         width: 70%;
     }
 
+    .why-funds {
+        flex-direction: column;
+        padding: 8% 10%;
+    }
+
+    .why-funds .data{
+        flex-direction: column;
+    }
+
+    .why-funds .data h2{
+        font-size: 2rem;
+    }
+
+    .voucher-a{
+        padding: 8%;
+        gap: 20px;
+    }
+
+    .vouching-companies{
+        flex-direction: column;
+        gap: 20px;
+    }
+
     .data{
         gap: 20px;
         width: 100%;
@@ -1526,6 +1626,7 @@ textarea[placeholder]{
     .footer{
         flex-direction: column;
         gap: 25px;
+        justify-content: center;
         align-items: center;
         padding: 8% 5%;
     }
@@ -1537,20 +1638,23 @@ textarea[placeholder]{
     }
 
     .map-contact{
-        flex-direction: column;
+        display: flex;
         width: 100%;
-        gap: 20px;
-        padding: 10%;
+        justify-content: center;
+        align-items: center;
+        /* padding: 10%; */
         /* outline: 1px solid red; */
     }
 
     .form{
-        width: 300px;
+        width: 92%;
         padding: 20px;
     }
 
     .form h1{
         font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: -1px;
         text-align: center;
         text-transform: uppercase;
     }
@@ -1568,8 +1672,8 @@ textarea[placeholder]{
     }
 
     .map-contact iframe{
-        border-radius: 0px;
-        width: 300px;
-        height: 300px;
+        border-radius: 5px;
+        width: 80%;
+        aspect-ratio: 1/1;
     }
 }
