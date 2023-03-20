@@ -1,6 +1,3 @@
-//if(screen.width<575) document.querySelector(".incubator-logo").setAttribute("src","images/incubator-logo-mobile.png");
-AOS.init();
-
 const swiper = new Swiper('.main-swiper', {
     // Optional parameters
     direction: 'horizontal',
@@ -114,3 +111,7 @@ hamburger.addEventListener('focusout', (e)=>{
   hamburger.children[2].classList.toggle("y");
   hamburger.children[1].classList.toggle("x-fade");
 });
+
+AOS.init();
+
+if(screen.width<575) document.querySelectorAll(".point-card").forEach((card)=>{card.setAttribute("data-aos","fade-right")});
