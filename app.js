@@ -1,4 +1,5 @@
 //if(screen.width<575) document.querySelector(".incubator-logo").setAttribute("src","images/incubator-logo-mobile.png");
+AOS.init();
 
 const swiper = new Swiper('.main-swiper', {
     // Optional parameters
