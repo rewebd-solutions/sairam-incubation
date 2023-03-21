@@ -299,6 +299,34 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     width: 100%;
     background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(173, 204, 233, 0.5) 100%);
     box-shadow: inset 0px 0px 15px #ADCCE9;
+    position: relative;
+    overflow: hidden;
+}
+
+.mainillus{
+    position: absolute;
+    width:auto;
+    height: auto;
+    max-width: 30%;
+    z-index: -1;
+    transform: rotate(0deg);
+    top: -23%;
+    right: -10%;
+    filter: invert(47%) sepia(31%) saturate(4645%) hue-rotate(201deg) brightness(101%) contrast(96%);
+}
+
+.mainillus2{
+    position: absolute;
+    width:auto;
+    height: auto;
+    max-width: 30%;
+    z-index: -1;
+    transform: rotate(0deg);
+    bottom: 0%;
+    top: 60%;
+    right: 0%;
+    left:-20%;
+    filter: invert(47%) sepia(31%) saturate(4645%) hue-rotate(201deg) brightness(101%) contrast(96%);
 }
 
 .why-funds {
@@ -342,9 +370,10 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1.6%;
+    gap: 1%;
     align-items: flex-start;
     width: 100%;
+    /* flex-wrap: wrap; */
 }
 
 .voucher-a .desc-info{
@@ -353,7 +382,7 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
 
 .company-card{
     display: flex;
-    width: 460px;
+    width: 420px;
     height: auto;
     padding: 1%;
     margin-top: 5%;
@@ -435,6 +464,7 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
 
 .incubation-points {
     width: 100%;
+    position: relative;
     display: flex;
     gap: 5%;
     flex-wrap: wrap;
@@ -442,6 +472,23 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     align-items: center;
     padding: 7% 8%;
     background: linear-gradient(270deg, rgba(173, 204, 233, 0.5) 0%, rgba(173, 204, 233, 0) 61.46%);
+    overflow: hidden;
+}
+
+.pointillus{
+    position: absolute;
+    width: auto;
+    height: auto;
+    max-width: 50%;
+    left: -35%;
+}
+
+.pointillus2{
+    position: absolute;
+    width: auto;
+    height: auto;
+    max-width: 50%;
+    right: -35%;
 }
 
 .point-card {
@@ -583,6 +630,7 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
 }
 
 .startup-points {
+    position: relative;
     width: 100%;
     display: flex;
     gap: 50px;
@@ -591,6 +639,18 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     align-items: center;
     padding: 5% 0%;
     background: linear-gradient(270deg, rgba(173, 204, 233, 0.5) 0%, rgba(173, 204, 233, 0) 61.46%);
+    overflow: hidden;
+}
+
+.startillus{
+    position: absolute;
+    width: auto;
+    height: auto;
+    width: 25%;
+    transform: rotate(0deg);
+    top: -2%;
+    right: -3%;
+    z-index: -5;
 }
 
 .startup-cards {
@@ -678,7 +738,7 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
 }
 
 .marquee{
-    --gap: 1.7rem;
+    --gap: 3rem;
     display: flex;
     padding: 2% 5%;
     overflow: hidden;
@@ -686,7 +746,7 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     gap: var(--gap);
     width: 100%;
     position: relative;
-    background: #fff;
+    background: #ffffff00;
 }
 
 .marquee-content{
@@ -698,7 +758,7 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
 }
 
 .marquee-content img{
-    height: 120px;
+    height: 110px;
     width: auto;
 }
 
@@ -737,6 +797,20 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(173, 204, 233, 0.5) 100%);
     box-shadow: inset 0px 0px 15px #ADCCE9;
     gap: 5%;
+    position: relative;
+    overflow: hidden;
+}
+
+.fundillus{
+    position: absolute;
+    width: auto;
+    height: auto;
+    width: 110%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 10%;
+    /* z-index: -5; */
 }
 
 .funds-div-wrapper{
