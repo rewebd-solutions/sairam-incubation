@@ -294,6 +294,7 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     align-items: center;
     justify-content: center;
     padding: 5% 10%;
+    text-align: justify;
     gap: 15%;
     width: 100%;
     background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(173, 204, 233, 0.5) 100%);
@@ -322,6 +323,7 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
 
 .why-funds .data .desc-info{
     line-height: 2.2rem;
+    text-align: justify;
 }
 
 .voucher-a{
@@ -333,21 +335,25 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(173, 204, 233, 0.5) 100%);
     width: 100%;
     gap: 50px;
+    text-align: justify;
 }
 
 .vouching-companies{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    gap: 2%;
+    gap: 1.6%;
     align-items: flex-start;
-    flex-wrap: wrap;
-    width: 95%;
+    width: 100%;
+}
+
+.voucher-a .desc-info{
+    width: 70%;
 }
 
 .company-card{
     display: flex;
-    width: 500px;
+    width: 460px;
     height: auto;
     padding: 1%;
     margin-top: 5%;
@@ -488,7 +494,8 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     font-weight: 400;
     font-size: 1.2rem;
     line-height: 26px;
-    color: #454545
+    color: #454545;
+    text-align: justify;
 }
 
 .projects {
@@ -1291,6 +1298,10 @@ textarea[placeholder]{
     display: flex;
 }
 
+.D8bnZd{
+    background-color: transparent !important;
+}
+
 @media screen and (max-width: 800px) {
     .nav-main .nav-btns{
         display: none;
@@ -1396,6 +1407,10 @@ textarea[placeholder]{
         font-size: 2rem;
     }
 
+    .why-funds .data .desc-info{
+        line-height: 1.5rem;
+    }
+
     .voucher-a{
         padding: 8%;
         gap: 20px;
@@ -1404,6 +1419,19 @@ textarea[placeholder]{
     .vouching-companies{
         flex-direction: column;
         gap: 20px;
+    }
+
+    .voucher-a .desc-info{
+        width: 100%;
+    }
+
+    .company-card{
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .company-card h3{
+        font-size: 1rem;
     }
 
     .data{
