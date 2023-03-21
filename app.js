@@ -98,20 +98,11 @@ function menuToggle(e){
   hamburger.children[1].classList.toggle("x-fade");
 }
 
-hamburger.addEventListener('focusin', (e)=>{
-  nav.classList.remove("nav-main-hide-mobile");
-  hamburger.children[0].classList.toggle("x");
-  hamburger.children[2].classList.toggle("y");
-  hamburger.children[1].classList.toggle("x-fade");
-});
-
-hamburger.addEventListener('focusout', (e)=>{
-  nav.classList.add("nav-main-hide-mobile");
-  hamburger.children[0].classList.toggle("x");
-  hamburger.children[2].classList.toggle("y");
-  hamburger.children[1].classList.toggle("x-fade");
-});
-
 AOS.init();
+
+Splitting();
+ScrollOut({
+  targets: '[data-splitting]'
+});
 
 if(screen.width<575) document.querySelectorAll(".point-card").forEach((card)=>{card.setAttribute("data-aos","fade-right")});
