@@ -1166,7 +1166,19 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     background: linear-gradient(180deg, rgba(173, 204, 233, 0.5) 0%, rgba(255, 255, 255, 0) 51.04%, rgba(236, 243, 250, 0.117021) 62.5%, rgba(173, 204, 233, 0.5) 100%);
     box-shadow: inset 0px 0px 30px #ADCCE9;
     padding: 5% 8%;
-    gap: 40px
+    gap: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footillus{
+    position: absolute;
+    height: auto;
+    width: auto;
+    width: 50%;
+    left: 50%;
+    bottom: -110%;
+    transform: translateX(-50%)
 }
 
 .footer > div{
@@ -1458,10 +1470,27 @@ textarea[placeholder]{
     }
 
     .why-incubation{
+        position: relative;
         flex-direction: column;
         gap: 20px;
         padding: 10%;
         padding-bottom: 12%;
+    }
+    
+    .mainillus{
+        position: absolute;
+        width:auto;
+        height: auto;
+        max-width: 100%;
+        top: -29%;
+        left: -55%;
+        z-index: -1;
+        transform: rotate(0deg);
+        filter: invert(47%) sepia(31%) saturate(4645%) hue-rotate(201deg) brightness(101%) contrast(96%);
+    }
+    
+    .mainillus2{
+        display: none;
     }
 
     .incubation-main{
@@ -1629,6 +1658,10 @@ textarea[placeholder]{
     .startup-points{
         padding: 10% 0;
     }
+    
+    .startillus{
+        display: none;
+    }
 
     .startup-cards{
         flex-direction: column;
@@ -1668,6 +1701,10 @@ textarea[placeholder]{
         padding: 10%;
         gap: 30px;
     }
+    
+    .fundillus{
+        display: none;
+    }
 
     .funds-div-wrapper{
         flex-direction: column;
@@ -1683,6 +1720,10 @@ textarea[placeholder]{
 
     .fund-details{
         margin-top: 5%;
+    }
+    
+    .footillus{
+        display: none;
     }
 
     .profile-card{
