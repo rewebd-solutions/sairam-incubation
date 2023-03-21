@@ -1478,15 +1478,7 @@ textarea[placeholder]{
     }
     
     .mainillus{
-        position: absolute;
-        width:auto;
-        height: auto;
-        max-width: 100%;
-        top: -29%;
-        left: -55%;
-        z-index: -1;
-        transform: rotate(0deg);
-        filter: invert(47%) sepia(31%) saturate(4645%) hue-rotate(201deg) brightness(101%) contrast(96%);
+        display: none;
     }
     
     .mainillus2{
@@ -1561,6 +1553,14 @@ textarea[placeholder]{
         flex-direction: column;
         gap: 20px;
         padding: 15% 10%;
+    }
+    
+    .pointillus{
+        display: none;
+    }
+    
+    .pointillus2{
+        display: none;
     }
 
     .point-card{
