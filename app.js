@@ -98,6 +98,15 @@ function menuToggle(e){
   hamburger.children[1].classList.toggle("x-fade");
 }
 
+let galleryCount = 6; //obtain from external JSON file later
+
+const opener = document.querySelector(".gallery-open").innerHTML += `<i class="fa fa-angle-down"></i> &nbsp; ${galleryCount} more`
+
+const openGallery = ()=>{
+  document.querySelector(".gallery-images").classList.toggle("gallery-images-show");
+  document.querySelector(".gallery-gradient").classList.toggle("gallery-gradient-hide");
+}
+
 AOS.init();
 
 Splitting();

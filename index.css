@@ -28,6 +28,10 @@ h2.splitting[data-scroll="out"] .char {
     transform: translateY(0.25em);
 }
 
+[data-scroll="in"] .char{
+    transition: none;
+    opacity: 1;
+}
 
 .nav-main {
     z-index: 999;
@@ -76,44 +80,54 @@ h2.splitting[data-scroll="out"] .char {
     text-decoration: none;
     color: rgb(69, 69, 69);
     position: relative;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition: transform 0.25s linear, opacity 0.25s ease;
     /* outline: 1px solid red; */
 }
 
+.nav-btns:hover a:not(:hover){
+    opacity: 0.5;
+}
+
 .nav-btns>a:hover {
-    transform: translateY(-10%);
+    opacity: 1;
 }
 
-.contact-btn {
-    margin-left: 10px;
-    border: none;
-    background: rgba(67, 137, 250, 255);
-    padding: 0.7rem 1.4rem;
-    color: #ebebeb !important;
-    border-radius: 5px;
-    box-shadow: 1px 0 10px rgba(0, 0, 0, 0.200);
+.nav-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: translateY(10px);
+    height: 2px;
+    top: -3px;
+    left: 0;
+    background-color: rgba(67, 137, 250, 255);
+    transform-origin: center;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0;
 }
 
-.contact-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 1px 0 25px rgba(0, 0, 0, 0.226);
+.nav-link:hover::before {
+    transform: translateY(0) scale(1.1);
+    opacity: 1;
 }
 
 .nav-link::after {
     content: '';
     position: absolute;
     width: 100%;
-    transform: scaleX(0);
+    transform: translateY(-10px);
     height: 2px;
-    bottom: -2px;
+    bottom: -3px;
     left: 0;
     background-color: rgba(67, 137, 250, 255);
     transform-origin: center;
-    transition: transform 0.25s ease-out;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0;
 }
 
 .nav-link:hover::after {
-    transform: scaleX(1);
+    transform: translateY(0) scale(1.1);
+    opacity: 1;
 }
 
 .hamburger{
@@ -481,6 +495,7 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     height: auto;
     max-width: 50%;
     left: -35%;
+    opacity: 0.6
 }
 
 .pointillus2{
@@ -489,6 +504,7 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     height: auto;
     max-width: 50%;
     right: -35%;
+    opacity: 0.6
 }
 
 .point-card {
@@ -1137,11 +1153,37 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     gap: 20px;
     height: 500px;
     overflow: hidden;
+    position: relative;
+    transition: height 0.3s;
 }
 
 .gallery-images-show{
-    height: auto;
+    height: max-content;
     overflow: unset;
+}
+
+.gallery-gradient{
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    bottom: 0px;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(40, 40, 40, 0.03) 90%, rgba(40, 40, 40, 0) 100%);
+    z-index: 78;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-open{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.gallery-gradient-hide{
+    opacity: 0;
+    height: 0;
 }
 
 .gallery-images img{
@@ -1178,7 +1220,8 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     width: 50%;
     left: 50%;
     bottom: -110%;
-    transform: translateX(-50%)
+    transform: translateX(-50%);
+    z-index: -10;
 }
 
 .footer > div{
