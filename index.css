@@ -1166,10 +1166,10 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
 .gallery-gradient{
     position: absolute;
     width: 100%;
-    height: 20%;
+    height: 15%;
     bottom: 0px;
     left: 0;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(40, 40, 40, 0.03) 90%, rgba(40, 40, 40, 0) 100%);
+    background: linear-gradient(0deg, rgba(40, 40, 40, 0.481) 60%, rgba(40, 40, 40, 0) 100%);
     z-index: 78;
     display: flex;
     align-items: center;
@@ -1194,6 +1194,7 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     border: 2px solid white;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     width: 30%;
+    cursor: pointer;
 }
 
 .gallery-image .text-gradient{
@@ -1201,7 +1202,10 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.692) 0%, rgba(36, 36, 36, 0.493) 60%, rgba(0, 0, 0, 0) 100%);
     text-align: center;
     color: #ebebeb;
-    padding-top: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 10px;
 }
 
 .gallery-image img{
@@ -1221,19 +1225,60 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     height: 100vh;
     top: 0;
     left:0;
-    background: rgba(32, 32, 32, 0.377);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: opacity 0.3s;
+    padding: 2%;
+    gap: 2%
+}
+
+.gallery-modal div{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.gallery-modal div h2{
+    color: white;
+    font-size: 1rem;
+}
+
+.no-scroll{
+    height: 100%;
+    overflow: hidden;
 }
 
 .gallery-modal i{
     position: absolute;
-    left: 20px;
-    top: 100px;
+    top: 50px;
+    right: 50px;
+    text-align: center;
     color: white;
+    height: 50px;
+    border-radius: 50%;
+    width: 50px;
+    background-color: rgba(63, 63, 63, 0.858);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.gallery-modal div img{
+    width: 75%;
+    object-fit: cover;
+    transition: opacity 0.3s;
 }
 
 .gallery-modal-open{
     opacity: 1;
     z-index: 90;
+    background: rgba(32, 32, 32, 0.659);
+    backdrop-filter: grayscale(1);
 }
 
 .footer{
@@ -1921,6 +1966,10 @@ textarea[placeholder]{
 
     .gallery-image{
         width: 80%;
+    }
+
+    .gallery-modal div img{
+        width: 100%;
     }
 
     .footer{

@@ -73,8 +73,6 @@ window.addEventListener("scroll", function(){
   }
 }, false);
 
-const navSlider = document.querySelector(".nav-slider");
-let navSliderLeft = 0;
 
 const navLinks = document.querySelectorAll('a[href^="#"]');
 //console.log(navLinks)
@@ -115,7 +113,7 @@ let galleryImgs = [
 const gallerySection = document.querySelector(".gallery-images");
 
 galleryImgs.forEach((galImage)=>{
-  gallerySection.innerHTML += `<div class="gallery-image"><img src="${galImage.imgSrc}" alt="${galImage.desc}"><div class="text-gradient">${galImage.desc}</div></div>`
+  gallerySection.innerHTML += `<div class="gallery-image"><img src="${galImage.imgSrc}" alt="${galImage.desc}"><div src="${galImage.imgSrc}" alt="${galImage.desc}" class="text-gradient">${galImage.desc}</div></div>`
 })
 
 const opener = document.querySelector(".gallery-open").innerHTML += `<i class="fa fa-angle-down"></i> &nbsp; ${galleryCount} more`
@@ -130,14 +128,23 @@ let galModal = document.querySelector(".gallery-modal");
 
 const modalOpen = ()=>{
   galModal.classList.toggle('gallery-modal-open');
+  document.body.classList.toggle("no-scroll");
+  let navCheck = document.querySelector(".nav-main");
+  if (navCheck.classList.length == 1){
+    navCheck.classList.toggle("nav-main-hide");
+  }
+  // navCheck.classList.toggle("nav-main-hide");
 }
 
-const galleryImages = document.querySelectorAll(".gallery-image img").forEach(element => {
+const galleryImages = document.querySelectorAll(".gallery-image").forEach(element => {
   element.addEventListener('click',(e)=>{
-    console.log(e.target);
+    //console.log(galModal.children[0]); //change to galModal.children
     let galTop = window.pageYOffset || document.documentElement.scrollTop;
     galModal.style.top = `${galTop}px`;
-    modalOpen();
+    modalOpen(); //modal ku add a div and then add the images to cover it 
+    galModal.children[0].children[0].setAttribute('src',`${e.target.getAttribute("src")}`);
+    galModal.children[0].children[0].setAttribute('alt',`${e.target.getAttribute("alt")}`);
+    galModal.children[0].children[1].innerText = `${e.target.getAttribute("alt")}`;
   })
 });
 
