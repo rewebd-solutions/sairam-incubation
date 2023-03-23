@@ -179,6 +179,7 @@ h2.splitting[data-scroll="out"] .char {
 
 .text-gradient {
     position: absolute;
+    z-index: 9;
     bottom: 0;
     height: 50%;
     width: 100%;
@@ -1186,16 +1187,53 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     height: 0;
 }
 
-.gallery-images img{
-    border: 2px solid white;
+.gallery-image{
+    position: relative;
+    display: flex;
     box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.253);
-    width: 30%;
+    border: 2px solid white;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+    width: 30%;
 }
 
-.gallery-images img:hover{
+.gallery-image .text-gradient{
+    height: 30%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.692) 0%, rgba(36, 36, 36, 0.493) 60%, rgba(0, 0, 0, 0) 100%);
+    text-align: center;
+    color: #ebebeb;
+    padding-top: 20px;
+}
+
+.gallery-image img{
+    width: 100%;
+}
+
+.gallery-image:hover{
     transform: scale(1.05);
     box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.253);
+}
+
+.gallery-modal{
+    position: absolute;
+    z-index: -10;
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left:0;
+    background: rgba(32, 32, 32, 0.377);
+}
+
+.gallery-modal i{
+    position: absolute;
+    left: 20px;
+    top: 100px;
+    color: white;
+}
+
+.gallery-modal-open{
+    opacity: 1;
+    z-index: 90;
 }
 
 .footer{
@@ -1881,7 +1919,7 @@ textarea[placeholder]{
         flex-direction: column;
     }
 
-    .gallery-images img{
+    .gallery-image{
         width: 80%;
     }
 

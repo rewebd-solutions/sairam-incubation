@@ -99,13 +99,47 @@ function menuToggle(e){
 }
 
 let galleryCount = 6; //obtain from external JSON file later
+let galleryImgs = [
+  {imgSrc: "images/1.jpeg", desc: "CIBA MoU"},
+  {imgSrc: "images/2.jpeg", desc: "CIBA"},
+  {imgSrc: "images/3.jpeg", desc: "CIBA"},
+  {imgSrc: "images/4.jpeg", desc: "CIBA"},
+  {imgSrc: "images/Discussion With CIBA.jpg", desc: "Discussion with CIBA"},
+  {imgSrc: "images/Discussion with Mailswamy annadurai(1).jpeg", desc: "Discussion with Dr.Mayilsami"},
+  {imgSrc: "images/Discussion with Mailswamy Sivam.jpeg", desc: "Dicussion with Dr.Sivam"},
+  {imgSrc: "images/11.jpg", desc: "EDII Voucher"},
+  {imgSrc: "images/14.jpg", desc: "Underwater Vehicle Team"},
+  {imgSrc: "images/caro-2.jpg", desc: "SAUUC - 2022"}
+]
+
+const gallerySection = document.querySelector(".gallery-images");
+
+galleryImgs.forEach((galImage)=>{
+  gallerySection.innerHTML += `<div class="gallery-image"><img src="${galImage.imgSrc}" alt="${galImage.desc}"><div class="text-gradient">${galImage.desc}</div></div>`
+})
 
 const opener = document.querySelector(".gallery-open").innerHTML += `<i class="fa fa-angle-down"></i> &nbsp; ${galleryCount} more`
 
 const openGallery = ()=>{
+  document.querySelector("#gallery").scrollIntoView({behavior: 'smooth'});
   document.querySelector(".gallery-images").classList.toggle("gallery-images-show");
   document.querySelector(".gallery-gradient").classList.toggle("gallery-gradient-hide");
 }
+
+let galModal = document.querySelector(".gallery-modal");
+
+const modalOpen = ()=>{
+  galModal.classList.toggle('gallery-modal-open');
+}
+
+const galleryImages = document.querySelectorAll(".gallery-image img").forEach(element => {
+  element.addEventListener('click',(e)=>{
+    console.log(e.target);
+    let galTop = window.pageYOffset || document.documentElement.scrollTop;
+    galModal.style.top = `${galTop}px`;
+    modalOpen();
+  })
+});
 
 AOS.init();
 
