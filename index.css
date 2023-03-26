@@ -290,7 +290,7 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
 
 .project-desc{
     font-size: 1rem;
-    font-size: clamp(1rem, 0.782608695652174rem + 0.3478260869565217vw, 1.2rem);
+    font-size: clamp(1rem, 0.26028880866425974rem + 0.8664259927797836vw, 1.3rem);
     font-family: 'Montserrat', sans-serif;
     line-height: 1.5rem;
     font-weight: 500;
@@ -621,12 +621,11 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
 .project-image-wrapper {
     width: 100%;
     overflow: hidden;
-    object-fit: fill;
 }
 
 .project-image-wrapper .project-image {
-    width: 110%;
-    
+    width: 107%;
+    object-fit: contain;
 }
 
 .project-info {
@@ -1169,7 +1168,7 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     height: 15%;
     bottom: 0px;
     left: 0;
-    background: linear-gradient(0deg, rgba(40, 40, 40, 0.481) 60%, rgba(40, 40, 40, 0) 100%);
+    background: linear-gradient(0deg, rgba(40, 40, 40, 0.481) 90%, rgba(40, 40, 40, 0) 100%);
     z-index: 78;
     display: flex;
     align-items: center;
