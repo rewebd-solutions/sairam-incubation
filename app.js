@@ -1,3 +1,5 @@
+AOS.init();
+
 const swiper = new Swiper('.main-swiper', {
     // Optional parameters
     direction: 'horizontal',
@@ -147,8 +149,6 @@ const galleryImages = document.querySelectorAll(".gallery-image").forEach(elemen
     galModal.children[0].children[1].innerText = `${e.target.getAttribute("alt")}`;
   })
 });
-
-AOS.init();
 
 Splitting();
 ScrollOut({
