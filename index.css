@@ -59,7 +59,7 @@ h2.splitting[data-scroll="out"] .char {
 .nav-btns {
     display: flex;
     /* justify-content: center; */
-    gap: 20px;
+    gap: 30px;
     align-items: center;
     width: fit-content;
     /* outline: 1px solid red; */
@@ -728,28 +728,28 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     color: rgba(17, 17, 17, 0.8);
 }
 
-.startup-card ul{
-    margin-left: 20px;
+.startup-card ol{
+    margin-left: 35px;
     color: #454545;
 }
 
-.startup-card ul li{
+.startup-card ol li{
     margin-bottom: 5px;
     transition: margin-left 0.25s ease;
     text-transform: capitalize;
 }
 
-.startup-card ul li:hover{
+.startup-card ol li:hover{
     /* transform: scale(1.05); */
     margin-left: 10px;
     cursor: default
 }
 
-.startup-card ul li::marker{
-    color: transparent;
+.startup-card ol li::marker{
+    color: #454545;
 }
 
-.startup-card ul li:hover::marker{
+.startup-card ol li:hover::marker{
     color: rgba(67, 137, 250, 0.8)
 }
 
@@ -1801,11 +1801,11 @@ textarea[placeholder]{
         font-size: 1.5rem;
     }
 
-    .startup-card ul{
+    .startup-card ol{
         margin-left: 15px;
     }
 
-    .startup-card ul li::marker{
+    .startup-card ol li::marker{
         color: rgba(67, 137, 250, 0.8)
     }
 

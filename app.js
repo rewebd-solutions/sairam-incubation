@@ -101,15 +101,15 @@ function menuToggle(e){
 let galleryCount = 6; //obtain from external JSON file later
 let galleryImgs = [
   {imgSrc: "images/1.jpeg", desc: "CIBA MoU"},
-  {imgSrc: "images/2.jpeg", desc: "CIBA"},
-  {imgSrc: "images/3.jpeg", desc: "CIBA"},
-  {imgSrc: "images/4.jpeg", desc: "CIBA"},
+  {imgSrc: "images/2.jpeg", desc: "Vanakkam Startups"},
+  {imgSrc: "images/3.jpeg", desc: "Tamilnadu Startups"},
+  {imgSrc: "images/4.jpeg", desc: "TIEMA EXPO"},
   {imgSrc: "images/Discussion With CIBA.jpg", desc: "Discussion with CIBA"},
   {imgSrc: "images/Discussion with Mailswamy annadurai(1).jpeg", desc: "Discussion with Dr.Mayilsami"},
   {imgSrc: "images/Discussion with Mailswamy Sivam.jpeg", desc: "Dicussion with Dr.Sivam"},
-  {imgSrc: "images/11.jpg", desc: "EDII Voucher"},
+  {imgSrc: "images/11.jpg", desc: "CTS Innovation"},
   {imgSrc: "images/14.jpg", desc: "Underwater Vehicle Team"},
-  {imgSrc: "images/caro-2.jpg", desc: "SAUUC - 2022"}
+  {imgSrc: "images/caro-2.jpg", desc: "UMAGINE - Sathyabama TBI"}
 ]
 
 const gallerySection = document.querySelector(".gallery-images");
