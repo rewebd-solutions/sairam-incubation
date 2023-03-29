@@ -1,46 +1,5 @@
+// import { CountUp } from './countUp.min.js';
 AOS.init();
-
-const swiper = new Swiper('.main-swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-    spaceBetween: 20,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: true,
-    },
-    keyboard: {
-      enabled: true,
-    },
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  
-});
-
-const projectsSwiper = new Swiper('.projects-swiper', {
-    loop: true,
-    slidesPerView: "auto",
-    centeredSlides: true,
-    spaceBetween: 20,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: false,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    }
-});
-
 
 var lastScrollTop = 0;
 
@@ -98,6 +57,8 @@ function menuToggle(e){
   hamburger.children[1].classList.toggle("x-fade");
 }
 
+if(screen.width<575) document.querySelectorAll(".point-card").forEach((card)=>{card.setAttribute("data-aos","fade-right")});
+
 let galleryCount = 6; //obtain from external JSON file later
 let galleryImgs = [
   {imgSrc: "images/1.jpeg", desc: "CIBA MoU"},
@@ -132,7 +93,7 @@ const modalOpen = ()=>{
   galModal.classList.toggle('gallery-modal-open');
   document.body.classList.toggle("no-scroll");
   let navCheck = document.querySelector(".nav-main");
-  if (navCheck.classList.length == 1){
+  if (navCheck.classList.length == 1 && screen.width > 575){
     navCheck.classList.toggle("nav-main-hide");
   }
   // navCheck.classList.toggle("nav-main-hide");
@@ -149,10 +110,75 @@ const galleryImages = document.querySelectorAll(".gallery-image").forEach(elemen
     galModal.children[0].children[1].innerText = `${e.target.getAttribute("alt")}`;
   })
 });
+const swiper = new Swiper('.main-swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    spaceBetween: 20,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: true,
+    },
+    keyboard: {
+      enabled: true,
+    },
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+});
+
+const projectsSwiper = new Swiper('.projects-swiper', {
+    loop: true,
+    slidesPerView: "auto",
+    centeredSlides: true,
+    spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: false,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+});
 
 Splitting();
 ScrollOut({
   targets: '[data-splitting]'
 });
 
-if(screen.width<575) document.querySelectorAll(".point-card").forEach((card)=>{card.setAttribute("data-aos","fade-right")});
+// const fundCountUpOptions = {
+//   decimalPlaces: 2,
+//   duration: 3,
+//   enableScrollSpy: true,
+//   suffix: '  Cr+'
+// };
+
+// const fundsCountUp = new CountUp('fund-countup', 1.01, fundCountUpOptions);
+// if (!fundsCountUp.error) {
+//   fundsCountUp.start();
+// } else {
+//   console.error(fundsCountUp.error);
+// }
+
+// const companyCountUpOptions = {
+//   duration: 3,
+//   enableScrollSpy: true,
+//   suffix: '  +',
+// };
+
+// const companyCountUp = new CountUp('company-countup', 91, companyCountUpOptions);
+// if (!companyCountUp.error) {
+//   companyCountUp.start();
+// } else {
+//   console.error(companyCountUp.error);
+// }
