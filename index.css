@@ -381,6 +381,10 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     text-align: justify;
 }
 
+.voucher-b{
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(173, 204, 233, 0.5) 100%);
+}
+
 .vouching-companies{
     display: flex;
     justify-content: center;
@@ -397,7 +401,7 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
 
 .company-card{
     display: flex;
-    width: 420px;
+    width: 400px;
     height: auto;
     padding: 1%;
     margin-top: 5%;
@@ -651,6 +655,7 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     display: flex;
     gap: 50px;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 5% 0%;
@@ -667,6 +672,38 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     top: -2%;
     right: -3%;
     z-index: -5;
+}
+
+.startup-countups{
+    display: flex;
+    /* padding: 1%; */
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    /* outline: 1px solid red; */
+    width: 60%;
+}
+
+.startup-countup{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 6% 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #454545;
+    /* outline: 1px solid red; */
+}
+
+.startup-countup h3{
+    font-weight: 700;
+    color: #66a1ff;
+    font-size: 2rem
+}
+
+.startup-countup img{
+    width: 50%;
+    filter: invert(60%) sepia(49%) saturate(2073%) hue-rotate(192deg) brightness(100%) contrast(103%);
 }
 
 .startup-cards {
@@ -908,8 +945,8 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
 }
 
 .profile-card{
-    height: 425px;
-    width: 325px;
+    height: 380px;
+    width: 280px;
     /* height: 425px;
     width: 23%; */
     padding: 10px;
@@ -936,7 +973,7 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     height: 100%;
     width: 100%;
     display: flex;
-    padding: 5%;
+    padding: 3%;
     flex-direction: column;
     bottom: 0px;
     justify-content: flex-end;
@@ -973,7 +1010,7 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
 
 .profile-card:hover .pfp{
     box-shadow: 1px 0px 25px rgba(0, 0, 0, 0.253);
-    transform: translateY(-20%);
+    transform: translateY(-17%);
 }
 
 .team-members .profile-card:hover .pfp{
@@ -1228,7 +1265,7 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s, backdrop-filter 0.3s;
     padding: 2%;
     gap: 2%
 }
@@ -1831,6 +1868,10 @@ textarea[placeholder]{
         display: none;
     }
 
+    .startup-countups{
+        flex-direction: column;
+    }
+
     .funds-div-wrapper{
         flex-direction: column;
     }
@@ -1862,7 +1903,7 @@ textarea[placeholder]{
     }
 
     .profile-card:nth-of-type(1):hover .pfp{
-        transform: translateY(-26%);
+        transform: translateY(-20%);
     }
 
     .our-team{
@@ -1969,6 +2010,12 @@ textarea[placeholder]{
 
     .gallery-modal div img{
         width: 100%;
+    }
+
+    .gallery-modal i{
+        top: unset;
+        right: unset;
+        bottom: 50px;
     }
 
     .footer{
