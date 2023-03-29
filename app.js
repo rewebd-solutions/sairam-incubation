@@ -156,29 +156,29 @@ ScrollOut({
   targets: '[data-splitting]'
 });
 
-// const fundCountUpOptions = {
-//   decimalPlaces: 2,
-//   duration: 3,
-//   enableScrollSpy: true,
-//   suffix: '  Cr+'
-// };
+const fundCountUpOptions = {
+  decimalPlaces: 2,
+  duration: 3,
+  enableScrollSpy: true,
+  suffix: '  Cr +'
+};
 
-// const fundsCountUp = new CountUp('fund-countup', 1.01, fundCountUpOptions);
-// if (!fundsCountUp.error) {
-//   fundsCountUp.start();
-// } else {
-//   console.error(fundsCountUp.error);
-// }
+var fundsCountUp = new countUp.CountUp('fund-countup', 1.01, fundCountUpOptions);
+if (!fundsCountUp.error) {
+  fundsCountUp.start();
+} else {
+  console.error(fundsCountUp.error);
+}
 
-// const companyCountUpOptions = {
-//   duration: 3,
-//   enableScrollSpy: true,
-//   suffix: '  +',
-// };
+const companyCountUpOptions = {
+  duration: 3,
+  enableScrollSpy: true,
+  suffix: ' +',
+};
 
-// const companyCountUp = new CountUp('company-countup', 91, companyCountUpOptions);
-// if (!companyCountUp.error) {
-//   companyCountUp.start();
-// } else {
-//   console.error(companyCountUp.error);
-// }
+var companyCountUp = new countUp.CountUp('company-countup', 90, companyCountUpOptions);
+if (!companyCountUp.error) {
+  companyCountUp.start();
+} else {
+  console.error(companyCountUp.error);
+}
