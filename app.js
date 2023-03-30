@@ -84,8 +84,13 @@ const opener = document.querySelector(".gallery-open").innerHTML += `<i class="f
 const openGallery = ()=>{
   document.querySelector("#gallery").scrollIntoView({behavior: 'smooth'});
   document.querySelector(".gallery-images").classList.toggle("gallery-images-show");
-  document.querySelector(".gallery-gradient").classList.toggle("gallery-gradient-hide");
+  // document.querySelector(".gallery-gradient").classList.toggle("gallery-gradient-hide");
 }
+
+document.querySelector(".gallery-gradient").addEventListener('click', (e)=>{
+  document.querySelector(".gallery-gradient").classList.toggle("gallery-gradient-hide");
+  openGallery();
+})
 
 let galModal = document.querySelector(".gallery-modal");
 
@@ -176,7 +181,7 @@ const companyCountUpOptions = {
   suffix: ' +',
 };
 
-var companyCountUp = new countUp.CountUp('company-countup', 90, companyCountUpOptions);
+var companyCountUp = new countUp.CountUp('company-countup', 91, companyCountUpOptions);
 if (!companyCountUp.error) {
   companyCountUp.start();
 } else {
