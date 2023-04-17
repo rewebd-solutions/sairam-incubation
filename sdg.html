@@ -7,13 +7,13 @@
     <title>Projecs - SDG mapping - Sairam Techno Incubator</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
-    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <link href="js/aos.css" rel="stylesheet">
+    <script src="js/aos.js"></script>
+    <link rel="stylesheet" href="js/splitting.css" />
+    <link href="js/aos.css" rel="stylesheet">
+    <script src="js/aos.js"></script>
+    <link rel="stylesheet" href="js/splitting-cells.css" />
+    <script src="js/splitting.min.js"></script>
     <link rel="stylesheet" href="index.css">
     
 </head>
@@ -41,14 +41,22 @@
         </div>
     </nav>
     <div id="home" class="nav-comp"></div>
-
+    <hr class="vr-nav">
+    <div class="sdg-nav">
+        <a href="#sdg-one" class="sdg-nav-link">1</a>
+        <a href="#sdg-two" class="sdg-nav-link">2</a>
+        <a href="#sdg-three" class="sdg-nav-link">3</a>
+        <a href="#sdg-four" class="sdg-nav-link">4</a>
+        <a href="#sdg-five" class="sdg-nav-link">5</a>
+        <a href="#sdg-six" class="sdg-nav-link">6</a>
+    </div>
     <section id="fund" class="funds">
         <img src="images/Illustrations/14.png" alt="" class="fundillus">
         <h2 class="our-projects" data-splitting>SDG MAPPING</h2>
 
         <div class="sdg-goals">
             <hr class="vr">
-            <div class="sdg-goal">
+            <div id="sdg-one" class="sdg-goal">
                 <input type="checkbox" id="sdg-1">
                 <label for="sdg-1" class="sdg-goal-card">
                     <img src="images/sdg/E_SDG_Icons-01.jpg" alt="">
@@ -67,6 +75,9 @@
                 <input type="checkbox" id="sdg-2">
                 <label for="sdg-2" class="sdg-goal-card">
                     <img src="images/sdg/E_SDG_Icons-02.jpg" alt="">
+                    <div class="click-to-reveal">
+                        Click to reveal →
+                    </div>
                 </label>
                 <div class="sdg-goal-project">
                     <div>
@@ -90,7 +101,7 @@
                 </div>
             </div>
 
-            <div class="sdg-goal">
+            <div id="sdg-two" class="sdg-goal">
                 <input type="checkbox" id="sdg-4">
                 <label for="sdg-4" class="sdg-goal-card">
                     <img src="images/sdg/E_SDG_Icons-04.jpg" alt="">
@@ -135,7 +146,7 @@
                 </div>
             </div>
 
-            <div class="sdg-goal">
+            <div id="sdg-three" class="sdg-goal">
                 <input type="checkbox" id="sdg-7">
                 <label for="sdg-7" class="sdg-goal-card">
                     <img src="images/sdg/E_SDG_Icons-07.jpg" alt="">
@@ -180,7 +191,7 @@
                 </div>
             </div>
             
-            <div class="sdg-goal">
+            <div id="sdg-four" class="sdg-goal">
                 <input type="checkbox" id="sdg-10">
                 <label for="sdg-10" class="sdg-goal-card">
                     <img src="images/sdg/E_SDG_Icons-10.jpg" alt="">
@@ -225,7 +236,7 @@
                 </div>
             </div>
             
-            <div class="sdg-goal">
+            <div id="sdg-five" class="sdg-goal">
                 <input type="checkbox" id="sdg-13">
                 <label for="sdg-13" class="sdg-goal-card">
                     <img src="images/sdg/E_SDG_Icons-13.jpg" alt="">
@@ -270,7 +281,7 @@
                 </div>
             </div>
             
-            <div class="sdg-goal">
+            <div id="sdg-six" class="sdg-goal">
                 <input type="checkbox" id="sdg-16">
                 <label for="sdg-16" class="sdg-goal-card">
                     <img src="images/sdg/E_SDG_Icons-16.jpg" alt="">
@@ -323,6 +334,24 @@
             });
         });
         });
+
+
+        var lastScrollTop = 0;
+
+        window.addEventListener("scroll", function(){
+        // or window.addEventListener("scroll"....
+            var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+
+            if (screen.width >= 575){
+                if (st > lastScrollTop) {
+                document.querySelector(".nav-main").classList.add("nav-main-hide");
+                } else if (st < lastScrollTop) {
+                document.querySelector(".nav-main").classList.remove("nav-main-hide");
+                }
+                lastScrollTop = st <= 0 ? 0 : st; 
+            }
+        }, false);
+
 
         AOS.init();
 

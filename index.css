@@ -1484,11 +1484,56 @@ textarea[placeholder]{
     z-index: -5;
 }
 
+.vr-nav{
+    border: none;
+    width: 2px;
+    height: 70%;
+    background: rgba(0, 0, 0, 0.397);
+    position: fixed;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -8;
+}
+
+.sdg-nav{
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    z-index: 50;
+    gap: 6rem;
+    left: 5%;
+}
+
+.sdg-nav-link{
+    text-decoration: none;
+    color: #454545;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+    background-color: white;
+    border-radius: 50%;
+    padding: 1.5rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sdg-nav-link:focus{
+    background-color: #4389fa;
+    color: #cccccc;
+}
+
 .sdg-goal{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    gap: 2rem;
+    justify-content: center;
+    gap: 12rem;
     /* outline: 1px solid red; */
     padding: 1%;
     height: max-content
@@ -1503,7 +1548,8 @@ textarea[placeholder]{
     overflow-y: hidden;
     cursor: pointer;
     transition: transform 0.5s ease;
-    transform: translateX(10rem);
+    transform: translateX(3rem);
+    border-radius: 5px;
 }
 
 .sdg-goal-card:hover .click-to-reveal{
@@ -1517,13 +1563,13 @@ textarea[placeholder]{
     bottom: 0;
     left: 0;
     background: linear-gradient(to bottom, rgb(0, 0, 0, 0.04), rgb(0, 0, 0, 0.1) , rgb(0, 0, 0, 0.5));
-    color: rgb(216, 216, 216);
-    font-weight: 400;
+    color: rgb(236, 236, 236);
+    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: transform 0.3s ease;
-    transform: translateY(50%);
+    transform: translateY(100%);
     font-size: 1rem;
 }
 
@@ -1535,16 +1581,15 @@ textarea[placeholder]{
 .sdg-goal-project{
     background: white;
     display: flex;
-    height: 100%;
+    height: 16rem;
+    max-height: 16rem;
     overflow: hidden;
+    padding: 3rem;
     width: 0;
     opacity: 0;
+    border-radius: 5px;
     transition: width 0.5s ease, opacity 0.3s ease 0.6s;
-    margin-left: 20rem;
-}
-
-.sdg-goal-project div{
-    width: 200px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 
 input[type="checkbox"]{
@@ -1552,7 +1597,7 @@ input[type="checkbox"]{
 }
 
 input[type="checkbox"]:checked ~ .sdg-goal-project{
-    width: 300px;
+    width: 25rem; /*temporary*/
     opacity: 1;
 }
 
@@ -1568,8 +1613,11 @@ input[type="checkbox"]:checked ~ .sdg-goal-card {
 }
 
 input[type="checkbox"]:checked ~ .sdg-goal-card .click-to-reveal{
-    transform: translateY(50%)
+    transform: translateY(100%)
 }
+
+
+
 
 @media screen and (max-width: 800px) {
     .nav-main .nav-btns{
