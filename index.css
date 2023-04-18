@@ -697,7 +697,7 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
 
 .startup-countup h3{
     font-weight: 700;
-    color: #66a1ff;
+    color: rgba(63, 63, 63, 0.858);
     font-size: 2.5rem
 }
 
@@ -856,7 +856,6 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
 
 .fundillus{
     position: absolute;
-    width: auto;
     height: auto;
     width: 110%;
     top: 50%;
@@ -864,6 +863,11 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     transform: translateX(-50%) translateY(-50%);
     opacity: 10%;
     /* z-index: -5; */
+}
+
+.fundillus-static{
+    position: fixed;
+    width: 110%;
 }
 
 .funds-div-wrapper{
@@ -1103,11 +1107,11 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     height: 500px;
     overflow: hidden;
     position: relative;
-    transition: height 0.3s;
+    transition: height 0.5s ease;
 }
 
 .gallery-images-show{
-    height: max-content;
+    height: 100%;
     overflow: unset;
 }
 
